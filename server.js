@@ -37,7 +37,12 @@ app.delete("/api/notes/:id", function(req, res) {
   let id = req.params.id;
 
   var noteObj = { id: id };
-  db.splice(db.indexOf(noteObj), 1);
+  for (var i = 0; i < db.length; i++)
+    if (db[i].id === id) {
+      db.splice(i, 1);
+      break;
+    }
+
   fs.writeFile("./db/db.json", JSON.stringify(db), (err, result) => {});
   res.json(db);
 });
