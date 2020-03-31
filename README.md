@@ -1,6 +1,8 @@
 # Note Taker
 This is a simple note taking application, which uses an express backend to save, retrieve, and delete note data from a JSON file.
 
+View deployed site [here.](https://jordyns-note-taker.herokuapp.com/)
+
 ## Description
 For users that need to keep track of a lot of information, it's easy to forget or be unable to recall something important. Being able to take persistent notes allows users to have written information available when needed.
 
